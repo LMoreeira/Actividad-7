@@ -1,0 +1,1155 @@
+ERROR - 2024-06-07 04:12:37 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa_modulo', 3306, '', 0)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#13 {main}
+CRITICAL - 2024-06-07 04:12:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: GET, Route: empleado]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `empleado`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica\\audy_practica\\public\\index.php')
+ERROR - 2024-06-07 04:12:51 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa_modulo', 3306, '', 0)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#13 {main}
+CRITICAL - 2024-06-07 04:12:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: GET, Route: empleado/]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `empleado`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica\\audy_practica\\public\\index.php')
+ERROR - 2024-06-07 04:15:47 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa_modulo', 3306, '', 0)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#13 {main}
+CRITICAL - 2024-06-07 04:15:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: GET, Route: empleado]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `empleado`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica\\audy_practica\\public\\index.php')
+ERROR - 2024-06-07 04:17:49 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa_modulo', 3306, '', 0)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#13 {main}
+CRITICAL - 2024-06-07 04:17:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: GET, Route: empleado]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `empleado`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica\\audy_practica\\public\\index.php')
+ERROR - 2024-06-07 04:18:12 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa_modulo', 3306, '', 0)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#13 {main}
+CRITICAL - 2024-06-07 04:18:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: GET, Route: empleado]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `empleado`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica\\audy_practica\\public\\index.php')
+ERROR - 2024-06-07 04:18:31 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa_modulo', 3306, '', 0)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#13 {main}
+CRITICAL - 2024-06-07 04:18:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: GET, Route: empleado]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `empleado`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica\\audy_practica\\public\\index.php')
+ERROR - 2024-06-07 04:18:35 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa_modulo', 3306, '', 0)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#13 {main}
+CRITICAL - 2024-06-07 04:18:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: GET, Route: empleado/]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `empleado`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica\\audy_practica\\public\\index.php')
+ERROR - 2024-06-07 04:18:39 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa_modulo', 3306, '', 0)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#13 {main}
+CRITICAL - 2024-06-07 04:18:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: GET, Route: empleado]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `empleado`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica\\audy_practica\\public\\index.php')
+ERROR - 2024-06-07 04:20:01 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa_modulo', 3306, '', 0)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#13 {main}
+CRITICAL - 2024-06-07 04:20:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: GET, Route: empleado]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `empleado`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica\\audy_practica\\public\\index.php')
+ERROR - 2024-06-07 04:21:05 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa_modulo', 3306, '', 0)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#13 {main}
+CRITICAL - 2024-06-07 04:21:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: GET, Route: empleado]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `empleado`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica\\audy_practica\\public\\index.php')
+ERROR - 2024-06-07 04:25:04 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa_modulo', 3306, '', 0)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#13 {main}
+CRITICAL - 2024-06-07 04:25:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: empleado]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `empleado`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica\\audy_practica\\public\\index.php')
+ERROR - 2024-06-07 04:30:54 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), 'empresa_modulo', 3306, '', 0)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#13 {main}
+CRITICAL - 2024-06-07 04:30:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: GET, Route: empleado]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `empleado`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica\\audy_practica\\public\\index.php')
+ERROR - 2024-06-07 04:30:54 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), 'empresa_modulo', 3306, '', 0)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#13 {main}
+CRITICAL - 2024-06-07 04:30:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: GET, Route: empleado]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `empleado`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica\\audy_practica\\public\\index.php')
+ERROR - 2024-06-07 04:32:03 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), 'empresa_modulo', 3306, '', 0)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#13 {main}
+CRITICAL - 2024-06-07 04:32:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: GET, Route: empleado]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `empleado`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica\\audy_practica\\public\\index.php')
+ERROR - 2024-06-07 04:33:13 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), 'empresa_modulo', 3306, '', 0)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#13 {main}
+CRITICAL - 2024-06-07 04:33:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: GET, Route: empleado]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `empleado`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica\\audy_practica\\public\\index.php')
+ERROR - 2024-06-07 04:33:16 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), 'empresa_modulo', 3306, '', 0)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#13 {main}
+CRITICAL - 2024-06-07 04:33:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: GET, Route: empleado]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `empleado`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica\\audy_practica\\public\\index.php')
+ERROR - 2024-06-07 04:35:32 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for 11.3.0.6295 failed: Host desconocido.  in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\Users\\Luis M...', 186)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('11.3.0.6295', 'root', Object(SensitiveParameterValue), 'empresa_modulo', 3306, '', 0)
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#15 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for 11.3.0.6295 failed: Host desconocido.  in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('11.3.0.6295', 'root', Object(SensitiveParameterValue), 'empresa_modulo', 3306, '', 0)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for 11.3.0.6295 failed: Host desconocido.  in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#13 {main}
+CRITICAL - 2024-06-07 04:35:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for 11.3.0.6295 failed: Host desconocido. 
+[Method: GET, Route: empleado]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `empleado`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica\\audy_practica\\public\\index.php')
+ERROR - 2024-06-07 04:38:22 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), 'empresa_modulo', 3306, '', 0)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#13 {main}
+CRITICAL - 2024-06-07 04:38:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: GET, Route: empleado]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `empleado`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica\\audy_practica\\public\\index.php')
+ERROR - 2024-06-07 04:38:23 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), 'empresa_modulo', 3306, '', 0)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#13 {main}
+CRITICAL - 2024-06-07 04:38:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: GET, Route: empleado]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `empleado`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica\\audy_practica\\public\\index.php')
+ERROR - 2024-06-07 04:38:32 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), 'empresa_modulo', 3306, '', 0)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpresaController.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpresaController->index()
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpresaController))
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpresaController.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpresaController->index()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpresaController))
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#13 {main}
+CRITICAL - 2024-06-07 04:38:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: GET, Route: empresa]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `empresas`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\EmpresaController.php(23): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmpresaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpresaController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica\\audy_practica\\public\\index.php')
+ERROR - 2024-06-07 04:39:32 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa_modulo', 3306, '', 0)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#13 {main}
+CRITICAL - 2024-06-07 04:39:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: GET, Route: empleado]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `empleado`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica\\audy_practica\\public\\index.php')
+ERROR - 2024-06-07 04:39:33 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'empresa_modulo', 3306, '', 0)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\app\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+#7 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+#8 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Luis Moreira\Downloads\api_practica\audy_practica\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#13 {main}
+CRITICAL - 2024-06-07 04:39:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+[Method: GET, Route: empleado]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `empleado`', [], false)
+ 3 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\EmpleadoController.php(23): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmpleadoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadoController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica\\audy_practica\\public\\index.php')
+CRITICAL - 2024-06-07 04:45:53 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: empresa]
+in SYSTEMPATH\BaseModel.php on line 1833.
+ 1 SYSTEMPATH\BaseModel.php(1833): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\BaseModel.php(806): CodeIgniter\BaseModel->transformDataToArray(null, 'insert')
+ 3 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert(null, true)
+ 4 APPPATH\Controllers\EmpresaController.php(57): CodeIgniter\Model->insert(null)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmpresaController->create()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpresaController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica\\audy_practica\\public\\index.php')

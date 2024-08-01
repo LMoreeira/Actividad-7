@@ -1,0 +1,10 @@
+CRITICAL - 2024-07-30 20:26:47 --> Error: Call to a member function findAll() on null
+[Method: GET, Route: empresa]
+in APPPATH\Controllers\EmpresaController.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmpresaController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpresaController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica_Luis\\api_practica\\apiluis\\public\\index.php')

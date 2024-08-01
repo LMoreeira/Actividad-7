@@ -1,0 +1,130 @@
+CRITICAL - 2024-07-31 23:05:54 --> Error: Call to a member function findAll() on null
+[Method: GET, Route: estudiante]
+in APPPATH\Controllers\estudianteController.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\estudianteController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\estudianteController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica_Luis\\api_practica\\apiluis\\public\\index.php')
+CRITICAL - 2024-07-31 23:12:09 --> Error: Call to a member function findAll() on null
+[Method: GET, Route: estudiante]
+in APPPATH\Controllers\estudianteController.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\estudianteController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\estudianteController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica_Luis\\api_practica\\apiluis\\public\\index.php')
+CRITICAL - 2024-07-31 23:12:15 --> Error: Call to a member function findAll() on null
+[Method: GET, Route: estudiante]
+in APPPATH\Controllers\estudianteController.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\estudianteController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\estudianteController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica_Luis\\api_practica\\apiluis\\public\\index.php')
+CRITICAL - 2024-07-31 23:12:42 --> Error: Call to a member function findAll() on null
+[Method: GET, Route: estudiante]
+in APPPATH\Controllers\estudianteController.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\estudianteController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\estudianteController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica_Luis\\api_practica\\apiluis\\public\\index.php')
+CRITICAL - 2024-07-31 23:15:51 --> Error: Call to a member function findAll() on null
+[Method: GET, Route: estudiante]
+in APPPATH\Controllers\estudianteController.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\estudianteController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\estudianteController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica_Luis\\api_practica\\apiluis\\public\\index.php')
+CRITICAL - 2024-07-31 23:16:09 --> Error: Call to a member function findAll() on null
+[Method: GET, Route: estudiante]
+in APPPATH\Controllers\estudianteController.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\estudianteController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\estudianteController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica_Luis\\api_practica\\apiluis\\public\\index.php')
+ERROR - 2024-07-31 23:33:54 --> mysqli_sql_exception: Table 'empresa_modulo.estudiante' doesn't exist in C:\Users\Luis Moreira\Downloads\api_practica_Luis\api_practica\apiluis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\Users\Luis Moreira\Downloads\api_practica_Luis\api_practica\apiluis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Luis Moreira\Downloads\api_practica_Luis\api_practica\apiluis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Luis Moreira\Downloads\api_practica_Luis\api_practica\apiluis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Luis Moreira\Downloads\api_practica_Luis\api_practica\apiluis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Luis Moreira\Downloads\api_practica_Luis\api_practica\apiluis\vendor\codeigniter4\framework\system\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Luis Moreira\Downloads\api_practica_Luis\api_practica\apiluis\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Luis Moreira\Downloads\api_practica_Luis\api_practica\apiluis\app\Controllers\Estudiante.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Luis Moreira\Downloads\api_practica_Luis\api_practica\apiluis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Estudiante->index()
+#8 C:\Users\Luis Moreira\Downloads\api_practica_Luis\api_practica\apiluis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Estudiante))
+#9 C:\Users\Luis Moreira\Downloads\api_practica_Luis\api_practica\apiluis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Luis Moreira\Downloads\api_practica_Luis\api_practica\apiluis\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Luis Moreira\Downloads\api_practica_Luis\api_practica\apiluis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Luis Moreira\Downloads\api_practica_Luis\api_practica\apiluis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Luis Moreira\Downloads\api_practica_Luis\api_practica\apiluis\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis M...')
+#14 {main}
+CRITICAL - 2024-07-31 23:33:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'empresa_modulo.estudiante' doesn't exist
+[Method: GET, Route: estudiante]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `estudiante`', [], false)
+ 2 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Estudiante.php(11): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Estudiante->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Estudiante))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica_Luis\\api_practica\\apiluis\\public\\index.php')
+CRITICAL - 2024-07-31 23:33:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'empresa_modulo.estudiante' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `estudiante`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `estudiante`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `estudiante`', [], false)
+ 4 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Estudiante.php(11): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Estudiante->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Estudiante))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica_Luis\\api_practica\\apiluis\\public\\index.php')
+CRITICAL - 2024-07-31 23:33:54 --> [Caused by] mysqli_sql_exception: Table 'empresa_modulo.estudiante' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `estudiante`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `estudiante`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `estudiante`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `estudiante`', [], false)
+ 5 SYSTEMPATH\Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Estudiante.php(11): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Estudiante->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Estudiante))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica_Luis\\api_practica\\apiluis\\public\\index.php')

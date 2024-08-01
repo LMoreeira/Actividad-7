@@ -1,0 +1,14 @@
+CRITICAL - 2024-06-09 03:22:25 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: PUT, Route: empresa/5]
+in SYSTEMPATH\BaseModel.php on line 1833.
+ 1 SYSTEMPATH\BaseModel.php(1833): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(997): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(854): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\EmpresaController.php(77): CodeIgniter\Model->update('5', null)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmpresaController->update('5')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpresaController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\Luis Moreira\\Downloads\\api_practica\\apiluis\\public\\index.php')
